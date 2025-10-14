@@ -205,6 +205,54 @@
             margin-bottom: 1.5rem;
         }
 
+        /* Environmental Impact Section */
+        .environmental-impact {
+            background: var(--white);
+        }
+
+        .impact-content {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .impact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .impact-card {
+            background: var(--bg-light);
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .impact-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+        }
+
+        .impact-card h3 {
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+            color: var(--text-dark);
+            border-bottom: 2px solid var(--primary);
+            padding-bottom: 0.5rem;
+        }
+
+        .impact-card p {
+            color: var(--text-light);
+            line-height: 1.7;
+        }
+
+        .impact-card strong {
+            color: var(--primary);
+            font-weight: 600;
+        }
+
         /* Success Stories Section */
         .success-stories {
             background: var(--white);
@@ -350,6 +398,49 @@
             margin-top: 1rem;
         }
 
+        /* References Section */
+        .references {
+            background: var(--bg-light);
+        }
+
+        .references-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .reference-list {
+            text-align: left;
+            margin-top: 2rem;
+        }
+
+        .reference-list p {
+            margin-bottom: 1rem;
+            padding: 0.75rem;
+            background: var(--white);
+            border-radius: 8px;
+            font-size: 0.9rem;
+            line-height: 1.6;
+            color: var(--text-light);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+
+        .reference-list a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        .reference-list a:hover {
+            text-decoration: underline;
+        }
+
+        .reference-list strong {
+            color: var(--text-dark);
+        }
+
+        .reference-list em {
+            color: var(--primary);
+        }
+
         /* Footer */
         footer {
             background: var(--text-dark);
@@ -404,7 +495,8 @@
             <a href="#" class="logo">FluidMotion Robotics</a>
             <ul class="nav-links">
                 <li><a href="#about">About</a></li>
-                <li><a href="#success">Success Stories</a></li>
+                <li><a href="#impact">Environmental Impact</a></li>
+                <li><a href="#success">Progress</a></li>
                 <li><a href="#technology">Technology</a></li>
                 <li><a href="#team">Team</a></li>
                 <li><a href="#contact">Contact</a></li>
@@ -432,23 +524,67 @@
         <p class="subtitle">Clean waters through intelligent robotics</p>
         <div class="about-content">
             <p>
-                FluidMotion Robotics LLC is pioneering autonomous water cleaning solutions for marinas, 
-                lakes, and pools across the United States. Our Trash Feaster Vessel (TFV) platform 
-                combines AI navigation with automated waste collection to keep water environments 
-                clean without human intervention.
+                FluidMotion Robotics LLC is developing autonomous water cleaning solutions for marinas, 
+                lakes, and pools across the United States. Our vision for the Trash Feaster Vessel (TFV) 
+                platform would combine AI navigation with automated waste collection to keep water 
+                environments clean without human intervention.
             </p>
             <p>
-                Founded by experienced engineers from leading autonomous vehicle companies, we're 
-                developing commercial-ready vessels that work 24/7 to remove floating debris, 
-                plastic waste, and organic materials. Our vessels safely operate around boats, 
+                Founded by engineers with autonomous vehicle experience, we're working toward 
+                commercial vessels that could operate continuously to remove floating debris, 
+                plastic waste, and organic materials. The concept focuses on safe operation around boats, 
                 swimmers, and wildlife while efficiently cleaning water surfaces.
             </p>
             <p>
-                With a near-term commercial horizon enabled by funding and investment, we're 
-                targeting US marinas, lakes, and pool facilities first, then expanding to 
-                ocean cleaning applications. Our business model includes vessel sales, leasing 
-                programs, and comprehensive maintenance services for water facility operators.
+                With proper funding and investment, we believe there's significant potential to 
+                target US marinas, lakes, and pool facilities initially, with future expansion to 
+                ocean cleaning applications. Our proposed business model would include vessel sales, 
+                leasing programs, and maintenance services for water facility operators.
             </p>
+        </div>
+    </section>
+
+    <!-- Environmental Impact Section -->
+    <section id="impact" class="environmental-impact">
+        <h2>Environmental Impact & Market Need</h2>
+        <p class="subtitle">Data-driven evidence for autonomous water cleaning solutions</p>
+        <div class="impact-content">
+            <div class="impact-stats">
+                <div class="impact-grid">
+                    <div class="impact-card">
+                        <h3>Mediterranean Crisis</h3>
+                        <p>
+                            More than <strong>700 tons of plastic</strong> enter the Mediterranean every day [Ref6]. 
+                            In the Balearic islands alone, studies show <strong>0.04 plastic items per m²</strong> 
+                            on the sea surface, translating to <strong>100 billion surface floating plastic items</strong> [Ref5].
+                        </p>
+                    </div>
+                    <div class="impact-card">
+                        <h3>European Waste Growth</h3>
+                        <p>
+                            Despite EU prevention policies, plastic packaging waste increased from 
+                            <strong>154 to 188 kg per capita</strong> between 2011-2021 [Ref2]. 
+                            Mismanaged coastal waste increased by <strong>12% between 2012-2018</strong> [Ref3].
+                        </p>
+                    </div>
+                    <div class="impact-card">
+                        <h3>Land-Based Sources</h3>
+                        <p>
+                            Nearly <strong>80% of microplastic pollution</strong> in the Mediterranean Sea 
+                            originates from land sources [Ref4]. About <strong>80% of riverine plastic pollution</strong> 
+                            stems from only 1000 rivers globally [Ref16].
+                        </p>
+                    </div>
+                    <div class="impact-card">
+                        <h3>Scale Requirements</h3>
+                        <p>
+                            To effectively address marine pollution, autonomous cleaning systems must operate 
+                            at unprecedented scale. Current technological advances in sensors and machine learning 
+                            now enable cost-effective autonomous harvesting solutions.
+                        </p>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -506,9 +642,9 @@
                     <h3>Development Roadmap - Phase 1</h3>
                     <p>
                         Initial development phase focusing on our custom design remote telemetry and 
-                        communication system integration with prototype vessel design. This robust and 
-                        extremely cost-effective system enables reliable autonomous operation with 
-                        real-time monitoring capabilities for marine environments.
+                        communication system integration with prototype vessel design. Based on research 
+                        showing autonomous systems can achieve significant cost reductions compared to 
+                        human-operated vessels, enabling scalable deployment for large-scale environmental impact.
                     </p>
                     <img src="./figs/Fig3.png" alt="Custom telemetry system architecture" style="width: 100%; border-radius: 8px; margin: 1rem 0;">
                     <img src="./figs/Fig5.png" alt="Vessel prototype design" style="width: 100%; border-radius: 8px; margin: 1rem 0;">
@@ -578,36 +714,36 @@
         <p class="subtitle">Cutting-edge autonomous systems for marine environments</p>
         <div class="tech-grid">
             <div class="tech-card">
-                <h3>Custom Remote Telemetry System</h3>
+                <h3>Custom Remote Telemetry Concept</h3>
                 <p>
-                    Our custom design remote telemetry and communication system provides robust 
-                    and extremely cost-effective vessel control. Features GPS positioning, obstacle 
-                    detection, and wireless communication for reliable unmanned operation and 
-                    remote monitoring capabilities in marine environments.
+                    We're developing a custom remote telemetry and communication system designed for 
+                    cost-effective vessel control. The concept includes GPS positioning, obstacle 
+                    detection, and wireless communication for unmanned operation and 
+                    remote monitoring in marine environments.
                 </p>
             </div>
             <div class="tech-card">
-                <h3>Trash Feaster Vessels (TFV)</h3>
+                <h3>Trash Feaster Vessel (TFV) Concept</h3>
                 <p>
-                    Autonomous catamaran-hull vessels with dual 360° rotating jet thrusters, integrated 
-                    waste collection systems, and Return-to-Base (R2B) functionality. Unsinkable design 
-                    with anti-capsize features, solar charging, and docking mechanisms for automated operation.
+                    Planned autonomous catamaran-hull vessels with dual rotating jet thrusters, integrated 
+                    waste collection systems, and Return-to-Base functionality. Design concepts include 
+                    stability features, solar charging capabilities, and automated docking mechanisms.
                 </p>
             </div>
             <div class="tech-card">
-                <h3>Smart Water Cleaning</h3>
+                <h3>Smart Water Cleaning Vision</h3>
                 <p>
-                    AI-powered waste detection and collection system that identifies floating debris, 
-                    plastic waste, and organic materials. Smart navigation safely avoids boats, swimmers, 
-                    and wildlife while efficiently cleaning water surfaces in marinas, lakes, and pools.
+                    Proposed AI-powered waste detection and collection system to identify floating debris, 
+                    plastic waste, and organic materials. Envisioned smart navigation would safely avoid boats, 
+                    swimmers, and wildlife while cleaning water surfaces in marinas, lakes, and pools.
                 </p>
             </div>
             <div class="tech-card">
-                <h3>Reliable Marine Operation</h3>
+                <h3>Marine-Ready Design Goals</h3>
                 <p>
-                    Purpose-built for water environments with weatherproof design, solar charging, 
-                    and automatic docking for waste disposal. Operates continuously with minimal 
-                    maintenance, designed specifically for US marina and lake conditions.
+                    Targeting purpose-built design for water environments with weatherproof construction, 
+                    solar charging systems, and automatic docking for waste disposal. Goal of continuous 
+                    operation with minimal maintenance, specifically designed for US marina and lake conditions.
                 </p>
             </div>
         </div>
@@ -616,16 +752,16 @@
     <!-- Team Section -->
     <section id="team" class="team">
         <h2>Our Team</h2>
-        <p class="subtitle">Experienced professionals driving marine technology innovation</p>
+        <p class="subtitle">Dedicated team working toward marine technology solutions</p>
         <div class="team-grid">
             <div class="team-card">
                 <div class="team-avatar">🚢</div>
                 <h3>Chief Executive Officer</h3>
                 <div class="team-role">CEO & Co-Founder</div>
                 <p>
-                    Leading the technical vision and product strategy with extensive experience in autonomous 
-                    systems from major technology companies. Inventor of our custom remote telemetry and 
-                    communication system with active patents in autonomous vehicle control and navigation technologies.
+                    Leading technical vision and product strategy with background in autonomous 
+                    systems from technology companies. Developing custom remote telemetry and 
+                    communication concepts with experience in autonomous vehicle control and navigation.
                 </p>
             </div>
             
@@ -634,9 +770,9 @@
                 <h3>Pierre Gourdain</h3>
                 <div class="team-role">COO & Co-Founder</div>
                 <p>
-                    Driving operational excellence, business development, and strategic partnerships. 
-                    Responsible for scaling operations, financial management, and bringing FluidMotion's 
-                    marine cleaning technology to market through innovative business models.
+                    Focused on business development, strategic partnerships, and operational planning. 
+                    Working on financial strategy and market development approaches for FluidMotion's 
+                    marine cleaning technology concept.
                 </p>
             </div>
             
@@ -645,10 +781,9 @@
                 <h3>Ernestos</h3>
                 <div class="team-role">Head of Hardware Engineering</div>
                 <p>
-                    Leading hardware development for the Trash Feaster Vessel (TFV) platform. Expert in 
-                    PCB design, marine-grade electronics, and autonomous vehicle hardware integration. 
-                    European competition winner, responsible for transforming our custom telemetry system 
-                    into production-ready marine vessels.
+                    Contributing to hardware development concepts for the Trash Feaster Vessel (TFV) platform. 
+                    Background in PCB design and marine electronics. European robotics competition participant, 
+                    working on adapting telemetry concepts for marine vessel applications.
                 </p>
             </div>
         </div>
@@ -660,10 +795,10 @@
         <p class="subtitle">Interested in learning more about our technology?</p>
         <div class="about-content">
             <p>
-                We're currently in active development with our proven custom telemetry technology and 
-                award-winning team capabilities. Our near-term commercial deployment is 
-                enabled by strategic funding and investment partnerships. We're open to 
-                discussing pilot programs, partnership opportunities, and investment inquiries.
+                We're in early development of our custom telemetry technology concepts with a 
+                dedicated team working toward viable solutions. Commercial deployment potential 
+                depends on securing strategic funding and investment partnerships. We're open to 
+                discussing the opportunity, potential partnerships, and investment inquiries.
             </p>
             <p>
                 Whether you're a harbor authority, environmental organization, or technology 
@@ -674,6 +809,27 @@
                 <strong>FluidMotion Robotics LLC</strong><br>
                 <strong>Contact:</strong> Pierre Gourdain, COO<br>
             </p>
+        </div>
+    </section>
+
+    <!-- References Section -->
+    <section id="references" class="references">
+        <h2>References</h2>
+        <p class="subtitle">Scientific data supporting marine cleaning technology development</p>
+        <div class="references-content">
+            <div class="reference-list">
+                <p><strong>[Ref2]</strong> European Commission, Eurostat. Packaging waste statistics. Available: <a href="https://ec.europa.eu/eurostat/databrowser/view/env_waspac/default/table?lang=en" target="_blank">ec.europa.eu/eurostat</a></p>
+                
+                <p><strong>[Ref3]</strong> European Environment Agency. Mismanaged waste — a key source. Available: <a href="https://www.eea.europa.eu/publications/european-marine-litter-assessment/mismanaged-waste-a-key-source" target="_blank">eea.europa.eu</a></p>
+                
+                <p><strong>[Ref4]</strong> Sharma, S., Sharma, V. and Chatterjee, S. (2021). Microplastics in the Mediterranean Sea: Sources, Pollution Intensity, Sea Health, and Regulatory Policies. <em>Frontiers in Marine Science</em>, 8.</p>
+                
+                <p><strong>[Ref5]</strong> Fagiano, V., Compa, M., Alomar, C., García-Marcos, K. and Deudero, S. (2022). Marine plastics in Mediterranean islands: Evaluating the distribution and composition of plastic pollution in the surface waters along four islands of the Western Sea Basin. <em>Environmental Pollution</em>, 305, p.119268.</p>
+                
+                <p><strong>[Ref6]</strong> UNEP/MAP. Pollution in the Mediterranean. Available: <a href="https://www.unep.org/unepmap/resources/factsheets/pollution" target="_blank">unep.org/unepmap</a></p>
+                
+                <p><strong>[Ref16]</strong> The Ocean Cleanup. Available: <a href="https://theoceancleanup.com" target="_blank">theoceancleanup.com</a></p>
+            </div>
         </div>
     </section>
 
