@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="FluidMotion Robotics - AI-Powered Marine Cleaning Technology. Developing autonomous water cleaning vessels.">
+    <title>FluidMotion Robotics | AI-Powered Marine Cleaning Technology</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #2563eb;
+            --text-dark: #1e293b;
+            --text-light: #64748b;
+            --bg-light: #f8fafc;
+            --white: #ffffff;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            overflow-x: hidden;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 1.5rem 2rem;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text-dark);
+            text-decoration: none;
+            letter-spacing: -0.5px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--text-light);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 6rem 2rem 4rem;
+            background: linear-gradient(135deg, var(--bg-light) 0%, var(--white) 100%);
+        }
+
+        .hero-content {
+            max-width: 1200px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+            background: linear-gradient(135deg, var(--text-dark) 0%, var(--primary) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero .tagline {
+            font-size: 1.5rem;
+            color: var(--text-light);
+            margin-bottom: 3rem;
+            font-weight: 400;
+        }
+
+        .hero .description {
+            font-size: 1.125rem;
+            color: var(--text-light);
+            max-width: 700px;
+            margin: 0 auto 3rem;
+            line-height: 1.8;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            background: var(--primary);
+            color: var(--white);
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 1.125rem;
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 4px 6px rgba(37, 99, 235, 0.2);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(37, 99, 235, 0.3);
+        }
+
+        /* Section Styles */
+        section {
+            padding: 5rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            text-align: center;
+            font-weight: 700;
+        }
+
+        section .subtitle {
+            text-align: center;
+            color: var(--text-light);
+            font-size: 1.25rem;
+            margin-bottom: 4rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Technology Grid */
+        .tech-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .tech-card {
+            background: var(--white);
+            padding: 2.5rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .tech-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+        }
+
+        .tech-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--text-dark);
+        }
+
+        .tech-card p {
+            color: var(--text-light);
+            line-height: 1.8;
+        }
+
+        /* About Section */
+        .about {
+            background: var(--bg-light);
+        }
+
+        .about-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .about-content p {
+            font-size: 1.125rem;
+            color: var(--text-light);
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--text-dark);
+            color: var(--white);
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-content p {
+            color: var(--text-light);
+            margin-top: 1rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero .tagline {
+                font-size: 1.25rem;
+            }
+
+            .nav-links {
+                gap: 1rem;
+            }
+
+            section h2 {
+                font-size: 2rem;
+            }
+
+            .tech-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Smooth Scroll */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <a href="#" class="logo">FluidMotion Robotics</a>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#technology">Technology</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>FluidMotion Robotics</h1>
+            <p class="tagline">AI-Powered Marine Cleaning Technology</p>
+            <p class="description">
+                Developing autonomous water cleaning vessels that combine advanced robotics, 
+                artificial intelligence, and unified telemetry systems to protect our oceans, 
+                harbors, and waterways.
+            </p>
+            <a href="#about" class="cta-button">Learn More</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <h2>Our Mission</h2>
+        <p class="subtitle">Clean waters through intelligent robotics</p>
+        <div class="about-content">
+            <p>
+                FluidMotion Robotics is pioneering the next generation of autonomous water 
+                cleaning solutions. Our mission is to protect marine environments through 
+                innovative technology that combines artificial intelligence, computer vision, 
+                and advanced robotics.
+            </p>
+            <p>
+                Based in Silicon Valley, California, we're building the Trash Feaster Vessel (TFV) 
+                platform—autonomous vessels equipped with our proprietary DPilot unified 
+                telemetry system for precise navigation and waste collection in challenging 
+                marine environments.
+            </p>
+        </div>
+    </section>
+
+    <!-- Technology Section -->
+    <section id="technology">
+        <h2>Our Technology</h2>
+        <p class="subtitle">Cutting-edge autonomous systems for marine environments</p>
+        <div class="tech-grid">
+            <div class="tech-card">
+                <h3>DPilot System</h3>
+                <p>
+                    Our proprietary unified telemetry and command communication system provides 
+                    real-time synchronized control for precise autonomous vehicle operation with 
+                    professional-grade communication.
+                </p>
+            </div>
+            <div class="tech-card">
+                <h3>Trash Feaster Vessels</h3>
+                <p>
+                    Autonomous water cleaning vessels with AI-enhanced navigation, stereo 
+                    camera-based depth perception, and intelligent waste detection for 
+                    efficient harbor and coastal cleaning.
+                </p>
+            </div>
+            <div class="tech-card">
+                <h3>AI Navigation</h3>
+                <p>
+                    Computer vision and onboard LLM technology enable context-aware autonomous 
+                    behavior, adaptive decision-making, and safe operation in complex marine 
+                    environments.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Get in Touch</h2>
+        <p class="subtitle">Interested in learning more about our technology?</p>
+        <div class="about-content">
+            <p>
+                We're currently in development and looking forward to launching in 2026. 
+                For partnership inquiries, investment opportunities, or general questions, 
+                please reach out through our professional network.
+            </p>
+            <p style="margin-top: 2rem;">
+                <strong>FluidMotion Robotics LLC</strong><br>
+                Silicon Valley, California
+            </p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p class="logo">FluidMotion Robotics</p>
+            <p>&copy; 2025 FluidMotion Robotics LLC. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
