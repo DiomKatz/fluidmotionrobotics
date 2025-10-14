@@ -205,6 +205,138 @@
             margin-bottom: 1.5rem;
         }
 
+        /* Success Stories Section */
+        .success-stories {
+            background: var(--white);
+        }
+
+        .story-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+
+        .story-card {
+            background: var(--bg-light);
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .story-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 16px 48px rgba(0, 0, 0, 0.15);
+        }
+
+        .story-image {
+            width: 100%;
+            height: 240px;
+            object-fit: cover;
+        }
+
+        .story-content {
+            padding: 2rem;
+        }
+
+        .story-content h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--text-dark);
+        }
+
+        .story-content p {
+            color: var(--text-light);
+            line-height: 1.7;
+            margin-bottom: 1rem;
+        }
+
+        .story-stats {
+            display: flex;
+            gap: 2rem;
+            margin-top: 1.5rem;
+            padding-top: 1.5rem;
+            border-top: 2px solid var(--primary);
+        }
+
+        .stat {
+            text-align: center;
+        }
+
+        .stat-number {
+            display: block;
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        /* Team Section */
+        .team {
+            background: var(--bg-light);
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+
+        .team-card {
+            background: var(--white);
+            padding: 2.5rem;
+            border-radius: 16px;
+            text-align: center;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .team-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
+        }
+
+        .team-avatar {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            color: white;
+            margin: 0 auto 1.5rem;
+        }
+
+        .team-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            color: var(--text-dark);
+        }
+
+        .team-role {
+            color: var(--primary);
+            font-weight: 600;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            font-size: 0.9rem;
+        }
+
+        .team-card p {
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+
         /* Footer */
         footer {
             background: var(--text-dark);
@@ -259,7 +391,9 @@
             <a href="#" class="logo">FluidMotion Robotics</a>
             <ul class="nav-links">
                 <li><a href="#about">About</a></li>
+                <li><a href="#success">Success Stories</a></li>
                 <li><a href="#technology">Technology</a></li>
+                <li><a href="#team">Team</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </div>
@@ -285,17 +419,99 @@
         <p class="subtitle">Clean waters through intelligent robotics</p>
         <div class="about-content">
             <p>
-                FluidMotion Robotics is pioneering the next generation of autonomous water 
-                cleaning solutions. Our mission is to protect marine environments through 
-                innovative technology that combines artificial intelligence, computer vision, 
-                and advanced robotics.
+                FluidMotion Robotics LLC is pioneering autonomous water cleaning solutions for marinas, 
+                lakes, and pools across the United States. Our Trash Feaster Vessel (TFV) platform 
+                combines AI navigation with automated waste collection to keep water environments 
+                clean without human intervention.
             </p>
             <p>
-                Based in Silicon Valley, California, we're building the Trash Feaster Vessel (TFV) 
-                platform—autonomous vessels equipped with our proprietary DPilot unified 
-                telemetry system for precise navigation and waste collection in challenging 
-                marine environments.
+                Founded by experienced engineers from leading autonomous vehicle companies, we're 
+                developing commercial-ready vessels that work 24/7 to remove floating debris, 
+                plastic waste, and organic materials. Our vessels safely operate around boats, 
+                swimmers, and wildlife while efficiently cleaning water surfaces.
             </p>
+            <p>
+                Starting with US marinas, lakes, and pool facilities in 2027, we're expanding 
+                to ocean cleaning applications as our technology scales. Our business model 
+                includes vessel sales, leasing programs, and comprehensive maintenance services 
+                for water facility operators and environmental organizations.
+            </p>
+        </div>
+    </section>
+
+    <!-- Success Stories Section -->
+    <section id="success" class="success-stories">
+        <h2>Success Stories</h2>
+        <p class="subtitle">Proven results in real-world marine environments</p>
+        <div class="story-grid">
+            <div class="story-card">
+                <img src="../enginerd/water/figs/Fig1_a_SF_marina.jpg" alt="San Francisco Marina showing floating waste materials" class="story-image">
+                <div class="story-content">
+                    <h3>Real-World Marina Challenge</h3>
+                    <p>
+                        San Francisco Marina demonstrates the daily challenge of floating debris and 
+                        waste materials that accumulate in marina environments. Our Trash Feaster 
+                        Vessels are designed specifically to address these real-world conditions, 
+                        providing automated cleaning for marinas across the United States.
+                    </p>
+                    <div class="story-stats">
+                        <div class="stat">
+                            <span class="stat-number">US</span>
+                            <span class="stat-label">Marinas</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">24/7</span>
+                            <span class="stat-label">Cleaning</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="story-card">
+                <img src="../enginerd/water/figs/Fig4.jpg" alt="Stereo vision and AI navigation system" class="story-image">
+                <div class="story-content">
+                    <h3>Smart Waste Detection</h3>
+                    <p>
+                        Our AI-powered vision system successfully identifies and collects floating debris, 
+                        plastic waste, and organic materials in marinas, lakes, and pools. The smart 
+                        navigation avoids boats, swimmers, and wildlife while efficiently cleaning 
+                        water surfaces without human supervision.
+                    </p>
+                    <div class="story-stats">
+                        <div class="stat">
+                            <span class="stat-number">Multi-Type</span>
+                            <span class="stat-label">Waste Detection</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">Safe</span>
+                            <span class="stat-label">Around People</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="story-card">
+                <img src="../enginerd/water/figs/Fig5.png" alt="Catamaran hull design and marine testing" class="story-image">
+                <div class="story-content">
+                    <h3>TFV Catamaran Platform Success</h3>
+                    <p>
+                        Completed design and testing of our unsinkable catamaran hull with dual 360° 
+                        rotating jet thrusters and integrated waste collection system. The vessel 
+                        demonstrated stable operation with Return-to-Base functionality and automated 
+                        docking for charging and waste disposal.
+                    </p>
+                    <div class="story-stats">
+                        <div class="stat">
+                            <span class="stat-number">&lt;40kg</span>
+                            <span class="stat-label">Vessel Weight</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">R2B</span>
+                            <span class="stat-label">Auto Return</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -305,27 +521,76 @@
         <p class="subtitle">Cutting-edge autonomous systems for marine environments</p>
         <div class="tech-grid">
             <div class="tech-card">
-                <h3>DPilot System</h3>
+                <h3>DPilot Navigation System</h3>
                 <p>
-                    Our proprietary unified telemetry and command communication system provides 
-                    real-time synchronized control for precise autonomous vehicle operation with 
-                    professional-grade communication.
+                    Patent-pending autonomous navigation system that enables vessels to operate 
+                    independently in marinas, lakes, and pools. Features GPS positioning, obstacle 
+                    detection, and wireless communication for reliable unmanned operation and 
+                    remote monitoring capabilities.
                 </p>
             </div>
             <div class="tech-card">
-                <h3>Trash Feaster Vessels</h3>
+                <h3>Trash Feaster Vessels (TFV)</h3>
                 <p>
-                    Autonomous water cleaning vessels with AI-enhanced navigation, stereo 
-                    camera-based depth perception, and intelligent waste detection for 
-                    efficient harbor and coastal cleaning.
+                    Autonomous catamaran-hull vessels with dual 360° rotating jet thrusters, integrated 
+                    waste collection systems, and Return-to-Base (R2B) functionality. Unsinkable design 
+                    with anti-capsize features, solar charging, and docking mechanisms for automated operation.
                 </p>
             </div>
             <div class="tech-card">
-                <h3>AI Navigation</h3>
+                <h3>Smart Water Cleaning</h3>
                 <p>
-                    Computer vision and onboard LLM technology enable context-aware autonomous 
-                    behavior, adaptive decision-making, and safe operation in complex marine 
-                    environments.
+                    AI-powered waste detection and collection system that identifies floating debris, 
+                    plastic waste, and organic materials. Smart navigation safely avoids boats, swimmers, 
+                    and wildlife while efficiently cleaning water surfaces in marinas, lakes, and pools.
+                </p>
+            </div>
+            <div class="tech-card">
+                <h3>Reliable Marine Operation</h3>
+                <p>
+                    Purpose-built for water environments with weatherproof design, solar charging, 
+                    and automatic docking for waste disposal. Operates continuously with minimal 
+                    maintenance, designed specifically for US marina and lake conditions.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="team" class="team">
+        <h2>Our Team</h2>
+        <p class="subtitle">Experienced professionals driving marine technology innovation</p>
+        <div class="team-grid">
+            <div class="team-card">
+                <div class="team-avatar">🚢</div>
+                <h3>Chief Executive Officer</h3>
+                <div class="team-role">CEO & Co-Founder</div>
+                <p>
+                    Leading the technical vision and product strategy with extensive experience in autonomous 
+                    systems from major technology companies. Inventor of the DPilot unified telemetry system 
+                    with active patents in autonomous vehicle control and navigation technologies.
+                </p>
+            </div>
+            
+            <div class="team-card">
+                <div class="team-avatar">⚓</div>
+                <h3>Pierre Gourdain</h3>
+                <div class="team-role">COO & Co-Founder</div>
+                <p>
+                    Driving operational excellence, business development, and strategic partnerships. 
+                    Responsible for scaling operations, financial management, and bringing FluidMotion's 
+                    marine cleaning technology to market through innovative business models.
+                </p>
+            </div>
+            
+            <div class="team-card">
+                <div class="team-avatar">�</div>
+                <h3>Ernestos</h3>
+                <div class="team-role">Head of Hardware Engineering</div>
+                <p>
+                    Leading hardware development for the Trash Feaster Vessel (TFV) platform. Expert in 
+                    PCB design, marine-grade electronics, and autonomous vehicle hardware integration. 
+                    Responsible for transforming the DPilot system into production-ready marine vessels.
                 </p>
             </div>
         </div>
@@ -337,13 +602,19 @@
         <p class="subtitle">Interested in learning more about our technology?</p>
         <div class="about-content">
             <p>
-                We're currently in development and looking forward to launching in 2026. 
-                For partnership inquiries, investment opportunities, or general questions, 
-                please reach out through our professional network.
+                We're currently in active development with prototype testing underway and 
+                commercial deployment planned for 2027. Our team is open to discussing 
+                partnership opportunities, pilot programs, and investment inquiries.
+            </p>
+            <p>
+                Whether you're a harbor authority, environmental organization, or technology 
+                partner interested in marine robotics, we'd love to explore how FluidMotion 
+                Robotics can contribute to cleaner waterways.
             </p>
             <p style="margin-top: 2rem;">
                 <strong>FluidMotion Robotics LLC</strong><br>
-                Silicon Valley, California
+                <strong>Contact:</strong> Pierre Gourdain, COO<br>
+                <a href="mailto:pierre[dot]gourdain[at]gmail.com" style="color: var(--primary); text-decoration: none;">pierre[dot]gourdain[at]gmail.com</a>
             </p>
         </div>
     </section>
