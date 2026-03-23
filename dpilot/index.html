@@ -1,0 +1,146 @@
+<!-- DPilot page copied from Enginerd/dpilot (image paths adjusted) -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DPilot - Advanced Flight Telemetry System | FluidMotionRobotics</title>
+    <meta name="description" content="DPilot: Research-grade flight data logging and ground control system with visual odometry, 50Hz unified state communication, and autonomous flight capabilities.">
+    <style>
+        /* Minimal inline styles copied from original for consistent look */
+        :root { --dpilot-blue: #1CB5E0; --dpilot-blue-light: #4FC3F7; --dpilot-blue-dark: #0288D1; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height:1.6; color:#333; background: linear-gradient(135deg, var(--dpilot-blue) 0%, var(--dpilot-blue-dark) 100%); }
+        .container { max-width:1200px; margin:0 auto; padding:0 20px; }
+        header{ background: rgba(255,255,255,0.95); position: fixed; width:100%; top:0; z-index:1000; }
+        nav{ display:flex; justify-content:space-between; align-items:center; padding:1rem 0; }
+        .logo{ display:flex; align-items:center; font-size:1.8rem; font-weight:bold; color:#333; text-decoration:none }
+        .logo-icon{ width:40px; height:40px; margin-right:12px; border-radius:50%; object-fit:cover }
+        .back-btn{ background:var(--dpilot-blue); color:white; padding:0.6rem 1.2rem; border-radius:8px; text-decoration:none }
+        .hero{ margin-top:80px; padding:4rem 0; text-align:center; color:white }
+        .hero-logo{ max-width:200px; height:auto; margin-bottom:2rem }
+        .content-section{ background:white; padding:4rem 0 }
+        .content-section.alt{ background:#f8f9fa }
+        .section-title{ font-size:2.5rem; text-align:center; margin-bottom:3rem; color:#333 }
+        .video-gallery, .system-images { display:flex; flex-direction:column; gap:2rem }
+        .video-card, .image-card{ width:100%; max-width:900px; margin-left:auto; margin-right:auto }
+        .image-card img{ width:100%; border-radius:8px }
+        .code-block{ background:#f1f3f5; padding:1.5rem; border-radius:8px; font-family:Courier, monospace }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <a href="../index.html" class="logo">
+                <img src="figs/dpilot_icon_100x100.png" alt="DPilot Logo" class="logo-icon">
+                DPilot
+            </a>
+            <a href="../index.html" class="back-btn">← Back to FluidMotion Robotics</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <img src="figs/dpilot.png" alt="DPilot" class="hero-logo" />
+                <h1>DPilot</h1>
+                <div class="hero-subtitle">Research-Grade Flight Telemetry & Visual Odometry System</div>
+                <div class="status-badge" style="background: #2196F3; color:white; display:inline-block; padding:0.5rem 1rem; border-radius:20px; margin-top:1rem;">Research & Development</div>
+                <p style="color:white; margin-top:1rem; max-width:900px; margin-left:auto; margin-right:auto;">Advanced flight telemetry system with 50Hz unified state communication, real-time web interface, and visual odometry capabilities using custom ESP32 PCB integration and Raspberry Pi AI Camera processing for autonomous flight research.</p>
+            </div>
+        </section>
+
+        <section class="content-section alt">
+            <div class="container">
+                <h2 class="section-title">System Requirements & Development Status</h2>
+                <div class="doc-section" style="margin-bottom:2rem; background:white; padding:1.5rem; border-radius:10px; box-shadow:0 5px 15px rgba(0,0,0,0.08)">
+                    <h3>🛡️ Regulatory & Notes</h3>
+                    <ul>
+                        <li><strong>Drone Operations:</strong> Operators must follow local UAV regulations.</li>
+                        <li><strong>RF:</strong> LoRa modules operate in 915MHz (US)/868MHz (EU). Ensure legal power and settings.</li>
+                        <li><strong>Encryption:</strong> AES-128 used for telemetry.</li>
+                        <li><strong>Camera Use:</strong> Comply with privacy laws for recordings.</li>
+                    </ul>
+                </div>
+
+                <div style="margin-top:1.5rem;">
+                    <h3 style="text-align:center">The System in Videos</h3>
+                    <div class="video-gallery">
+                        <div class="video-card"><a href="https://www.youtube.com/watch?v=UCzrSTzxzCQ" target="_blank"><div class="video-placeholder" style="background:url('https://img.youtube.com/vi/UCzrSTzxzCQ/hqdefault.jpg') center/cover; height:200px"></div><div style="padding:1rem"><h4>Latest: Autonomous Flight with FHSS</h4><p>Custom DPilot telemetry and flight control on Volantex Phoenix 2000mm. ESP32, MPU6050, SD logging, GPS, QMC5883L compass.</p></div></a></div>
+                        <div class="video-card"><a href="https://youtu.be/gD0sjTvzpPA" target="_blank"><div class="video-placeholder" style="background:url('https://img.youtube.com/vi/gD0sjTvzpPA/hqdefault.jpg') center/cover; height:200px"></div><div style="padding:1rem"><h4>DPilot: Advanced Telemetry & Autonomous Flight System | Full Demo</h4></div></a></div>
+                        <div class="video-card"><a href="https://youtu.be/oj7PcijIwBQ" target="_blank"><div class="video-placeholder" style="background:url('https://img.youtube.com/vi/oj7PcijIwBQ/hqdefault.jpg') center/cover; height:200px"></div><div style="padding:1rem"><h4>DPilot: Quick Overview</h4></div></a></div>
+                    </div>
+                </div>
+
+                <h3 style="text-align:center; margin-top:2rem">System Architecture & Interface</h3>
+                <div class="system-images">
+                    <div class="image-card"><img src="figs/system_architecture_overview.jpg" alt="System Architecture" style="height:200px; object-fit:cover"></div>
+                    <div class="image-card"><img src="figs/web_interface_dashboard.jpg" alt="Web Interface" style="height:400px; object-fit:cover"></div>
+                    <div class="image-card"><img src="figs/web_interface_dashboard map.jpg" alt="Interactive Map" style="height:400px; object-fit:cover"></div>
+                    <div class="image-card"><img src="figs/aircraft_integration_complete.jpg" alt="Aircraft Integration" style="height:300px; object-fit:cover"></div>
+                    <div class="image-card"><img src="figs/aircraft_integration_complete_phoenix.jpg" alt="Phoenix Aircraft" style="height:300px; object-fit:cover"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <div class="container">
+                <h2 class="section-title">Key Features</h2>
+                <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:1rem">
+                    <div style="background:linear-gradient(135deg,#f8f9fa,#e9ecef); padding:1rem; border-radius:10px">
+                        <h3>🎥 Enhanced Video Logging</h3>
+                        <ul><li>Hardware H.264 encoding, frame sync</li><li>60fps recording with telemetry</li><li>CSV logging synchronized to video</li></ul>
+                    </div>
+                    <div style="background:linear-gradient(135deg,#f8f9fa,#e9ecef); padding:1rem; border-radius:10px">
+                        <h3>📡 FHSS Communication</h3>
+                        <ul><li>Adaptive frequency hopping (902.5-927 MHz)</li><li>AES-128 encrypted LoRa</li></ul>
+                    </div>
+                    <div style="background:linear-gradient(135deg,#f8f9fa,#e9ecef); padding:1rem; border-radius:10px">
+                        <h3>🤖 Autonomous Stack</h3>
+                        <ul><li>Route → Plan → Control → Actuate</li><li>Smart waypoint advancement</li></ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section alt">
+            <div class="container">
+                <h2 class="section-title">Technical Specifications</h2>
+                <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(160px,1fr)); gap:1rem; text-align:center">
+                    <div style="background:var(--dpilot-blue); color:white; padding:1rem; border-radius:10px"><div style="font-size:2rem">50Hz</div><div>Unified State Rate</div></div>
+                    <div style="background:var(--dpilot-blue); color:white; padding:1rem; border-radius:10px"><div style="font-size:2rem">10Hz</div><div>GPS Update Rate</div></div>
+                    <div style="background:var(--dpilot-blue); color:white; padding:1rem; border-radius:10px"><div style="font-size:2rem">5km</div><div>LoRa Range</div></div>
+                </div>
+                <div style="margin-top:1.5rem" class="doc-section">
+                    <h3>🧠 Kalman Filter Attitude Estimation</h3>
+                    <p>5-state Kalman filter fusing accelerometer and gyro for roll/pitch estimation under dynamic flight.</p>
+                    <div class="code-block">(Code excerpt omitted in-site preview)</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <div class="container">
+                <h2 class="section-title">Hardware & Integration</h2>
+                <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:1rem">
+                    <div style="background:#f8f9fa; padding:1rem; border-radius:10px">
+                        <h4>🛩️ Aircraft</h4>
+                        <ul><li>VolantexRC Ranger 1600/2000</li><li>Custom 3D printed mounts</li></ul>
+                    </div>
+                    <div style="background:#f8f9fa; padding:1rem; border-radius:10px">
+                        <h4>🖥️ Computing & Vision</h4>
+                        <ul><li>Pi Zero 2W mission computer</li><li>AI camera (IMX500) support</li></ul>
+                    </div>
+                    <div style="background:#f8f9fa; padding:1rem; border-radius:10px">
+                        <h4>📡 Communication</h4>
+                        <ul><li>ESP32 + SX1262 LoRa</li><li>Heltec WiFi LoRa 32</li></ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer style="padding:2rem; text-align:center; color:white; background:rgba(0,0,0,0.2)">
+        <div class="container">&copy; 2026 FluidMotion Robotics — DPilot project page</div>
+    </footer>
+</body>
+</html>
