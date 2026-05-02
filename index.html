@@ -66,7 +66,7 @@
       background:
         linear-gradient(90deg, rgba(5,7,11,0.78), rgba(5,7,11,0.44), rgba(5,7,11,0.16)),
         linear-gradient(to bottom, rgba(5,7,11,0.28), rgba(5,7,11,0.42), #05070b 96%),
-        url("hero-render.jpg") center / cover no-repeat;
+        url("figs/hero-render.jpg") center / cover no-repeat;
       z-index: -2;
     }
 
@@ -356,10 +356,10 @@
       border-color: rgba(164,125,171,0.28);
     }
 
-    .project-image.usv { background-image: url("project-usv.jpg"); }
-    .project-image.autopilot { background-image: url("project-autopilot.jpg"); }
-    .project-image.power { background-image: url("project-power.jpg"); }
-    .project-image.platform { background-image: url("project-platform.jpg"); }
+    .project-image.usv { background-image: url("figs/project-usv.jpg"); }
+    .project-image.autopilot { background-image: url("figs/project-autopilot.jpg"); }
+    .project-image.power { background-image: url("figs/project-power.jpg"); }
+    .project-image.platform { background-image: url("figs/project-platform.jpg"); }
 
     .project-body {
       padding: 0;
@@ -429,10 +429,22 @@
       filter: grayscale(10%);
     }
 
-    .team-image.pierre { background-image: url("team-pierre.jpg"); }
-    .team-image.ernesto { background-image: url("team-ernesto.jpg"); }
-    .team-image.andreas { background-image: url("team-andreas.jpg"); }
-    .team-image.marios { background-image: url("team-marios.jpg"); }
+    .team-image.pierre { background-image: url("figs/team-pierre.jpg"); }
+    .team-image.ernesto { background-image: url("figs/team-ernesto.jpg"); }
+    .team-image.andreas { background-image: url("figs/team-andreas.jpg"); }
+
+    .team-image.placeholder {
+      display: grid;
+      place-items: center;
+      background:
+        radial-gradient(circle at 20% 20%, rgba(164,125,171,0.45), transparent 45%),
+        radial-gradient(circle at 80% 75%, rgba(80,180,220,0.35), transparent 50%),
+        #0a1220;
+      color: rgba(255, 255, 255, 0.9);
+      font-size: 44px;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+    }
 
     .role {
       color: var(--accent);
@@ -684,7 +696,7 @@
   <header class="hero">
     <nav class="nav">
       <a href="#" aria-label="FluidMotion Robotics home">
-        <img src="logo.png" alt="FluidMotion Robotics" class="logo" />
+        <img src="figs/logo.png" alt="FluidMotion Robotics" class="logo" />
       </a>
 
       <div class="nav-links">
@@ -900,11 +912,19 @@
         </p>
 
         <div class="team-grid">
+          <a class="team-card" href="#team" aria-label="Diomidis K., Co-founder">
+            <div class="team-image placeholder" role="img" aria-label="Diomidis K.">DK</div>
+            <div class="team-body">
+              <p class="role">Co-founder</p>
+              <h3>D. K.</h3>
+            </div>
+          </a>
+
           <a class="team-card" href="https://www.linkedin.com/in/pierre-gourdain-flixbus/" target="_blank" rel="noopener">
-            <div class="team-image pierre" role="img" aria-label="Pierre Gourdain"></div>
+            <div class="team-image pierre" role="img" aria-label="Pierre G"></div>
             <div class="team-body">
               <p class="role">COO</p>
-              <h3>Pierre Gourdain</h3>
+              <h3>Pierre G</h3>
             </div>
           </a>
 
@@ -925,10 +945,10 @@
           </a>
 
           <a class="team-card" href="https://www.linkedin.com/in/marios-konstantoudakis-88b193301/" target="_blank" rel="noopener">
-            <div class="team-image marios" role="img" aria-label="Marios Konstantoudakis"></div>
+            <div class="team-image placeholder" role="img" aria-label="Marios K">M</div>
             <div class="team-body">
               <p class="role">Software and Controls</p>
-              <h3>Marios Konstantoudakis</h3>
+              <h3>Marios K</h3>
             </div>
           </a>
         </div>
