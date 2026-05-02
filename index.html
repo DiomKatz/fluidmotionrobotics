@@ -405,6 +405,33 @@
       line-height: 1.55;
     }
 
+    .project-flight-figure {
+      margin: 20px 0 0;
+      border: 1px solid rgba(255,255,255,0.1);
+      background: rgba(255,255,255,0.03);
+      overflow: hidden;
+    }
+
+    .project-flight-figure img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .project-flight-figure figcaption {
+      padding: 12px 14px;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.5;
+      border-top: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .project-flight-figure a {
+      color: #d9fbff;
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+
     .tag {
       display: inline-flex;
       color: var(--accent);
@@ -879,6 +906,14 @@
               <span class="tag">Software Platform</span>
               <h3>DPilot Platform</h3>
               <p>Mission software for semi-autonomous operation, live mission streaming, state estimation, and hybrid motion control across robotic vehicles.</p>
+              <figure class="project-flight-figure">
+                <img src="figs/2026_4_21_debrief_20260406_000720_EKF_4_52.jpg" alt="DPilot test flight at Baylands Park in Sunnyvale, California" loading="lazy" />
+                <figcaption>
+                  DPilot test flight at Baylands Park, Sunnyvale, California.
+                  Park details:
+                  <a href="https://parks.santaclaracounty.gov/locations/sunnyvale-baylands-park" target="_blank" rel="noopener">Sunnyvale Baylands Park</a>.
+                </figcaption>
+              </figure>
               <div class="project-list">
                 <div class="project-point">
                   <strong>Semi-autonomous operation</strong>
