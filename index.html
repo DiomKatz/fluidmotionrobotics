@@ -280,6 +280,23 @@
       align-items: start;
     }
 
+    .mission-direction-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.6fr;
+      gap: 64px;
+      align-items: start;
+    }
+
+    .mission-direction-grid .vision-grid {
+      grid-template-columns: 1fr;
+      margin-top: 24px;
+    }
+
+    .h2-small {
+      font-size: clamp(20px, 2.2vw, 30px);
+      margin-bottom: 18px;
+    }
+
     .challenge-stack {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -698,6 +715,7 @@
   .nav-links a:not(.nav-cta) { display: none; }
 
   .intro-grid,
+  .mission-direction-grid,
   .contact-grid,
   .team-grid,
   .vision-grid,
@@ -824,53 +842,51 @@
           </article>
           <article class="challenge">
             <span>Defense &amp; Surveillance</span>
-            <p>California (Pacific) and Greece (Aegean / Mediterranean) — coastlines where persistent autonomous monitoring and adaptable maritime operations matter.</p>
+            <p>California (Pacific) and Greece (Aegean / Mediterranean) — coastlines where persistent autonomous monitoring and adaptable maritime operations matter</p>
           </article>
         </div>
       </div>
     </section>
 
     <section id="intro" class="section section-border">
-      <div class="container">
-        <p class="kicker">Mission</p>
-        <h2>Unified autonomy for critical environments</h2>
-        <p class="section-copy">
+      <div class="container mission-direction-grid">
+        <div>
+          <p class="kicker">Mission</p>
+          <h2 class="h2-small">Unified autonomy for critical environments</h2>
+          <p class="section-copy">
             Fluid Motion Robotics (FMR) is a California and Greece based company rooted in two strategically important coastlines, the Pacific Ocean and the Aegean and Mediterranean Sea. These regions demand resilient, autonomous systems for monitoring, response, and continuous operations across complex environments. FMR builds the hardware and software to meet those demands.
-        </p>
-      </div>
-    </section>
+          </p>
+        </div>
+        <div>
+          <p class="kicker">Direction</p>
+          <h2 class="h2-small">Vision, mission, and execution roadmap</h2>
+          <div class="vision-grid">
+            <article class="vision-card">
+              <span class="vision-number">01</span>
+              <h3>The Vision</h3>
+              <p>Restore the world's most critical water and land infrastructures.</p>
+            </article>
 
-    <section class="section vision-stack section-border">
-      <div class="container">
-        <p class="kicker">Direction</p>
-        <h2>Vision, mission, and execution roadmap</h2>
+            <article class="vision-card large">
+              <span class="vision-number">02</span>
+              <h3>The Mission</h3>
+              <ul>
+                <li>Deploy water cleaning, airspace and land monitoring at scale.</li>
+                <li>Enable GPS-denied operations for UAVs and USVs with onboard AI decision making.</li>
+                <li>Surpass market leaders in performance.</li>
+              </ul>
+            </article>
 
-        <div class="vision-grid">
-          <article class="vision-card">
-            <span class="vision-number">01</span>
-            <h3>The Vision</h3>
-            <p>Restore the world's most critical water and land infrastructures.</p>
-          </article>
-
-          <article class="vision-card large">
-            <span class="vision-number">02</span>
-            <h3>The Mission</h3>
-            <ul>
-              <li>Deploy water cleaning, airspace and land monitoring at scale.</li>
-              <li>Enable GPS-denied operations for UAVs and USVs with onboard AI decision making.</li>
-              <li>Surpass market leaders in performance.</li>
-            </ul>
-          </article>
-
-          <article class="vision-card large">
-            <span class="vision-number">03</span>
-            <h3>The Goals <em>18 months</em></h3>
-            <ul>
-              <li>Commercialize DPilot Control and DPilot Horizon AI integration.</li>
-              <li>TFV manufacturability, robust DPilot Surf, and mini-scale demos.</li>
-              <li>Operations and strategic milestones across the USA and Greece.</li>
-            </ul>
-          </article>
+            <article class="vision-card large">
+              <span class="vision-number">03</span>
+              <h3>The Goals <em>18 months</em></h3>
+              <ul>
+                <li>Commercialize DPilot Control and DPilot Horizon AI integration.</li>
+                <li>TFV manufacturability, robust DPilot Surf, and mini-scale demos.</li>
+                <li>Operations and strategic milestones across the USA and Greece.</li>
+              </ul>
+            </article>
+          </div>
         </div>
       </div>
     </section>
