@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="FluidMotion Robotics builds fail-operational AI-powered autonomy across air, ground, and water." />
+  <meta name="description" content="FluidMotion Robotics builds a unified autonomy platform for Air (UAV), Ground (UGV), and Water (USV) operations where failure is not an option." />
   <title>FluidMotion Robotics</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -364,12 +364,16 @@
       transition: filter 220ms ease, border-color 220ms ease;
     }
 
-      .project-image img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        display: block;
-      }
+    .project-image.photo {
+      aspect-ratio: auto;
+      background: transparent;
+    }
+
+    .project-image img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
 
     .project-card:hover .project-image {
       filter: brightness(0.95) contrast(1.05);
@@ -789,7 +793,7 @@
     </nav>
 
     <div class="container hero-content">
-      <p style="color:var(--muted);font-size:15px;font-weight:600;letter-spacing:0.04em;margin-bottom:20px;">AI-powered autonomy across air, ground, and water</p>
+      <p style="color:var(--muted);font-size:15px;font-weight:600;letter-spacing:0.04em;margin-bottom:20px;">Unified Autonomy platform for Air (UAV), Ground (UGV), and Water (USV) operations where failure is not an option</p>
       <h1>FluidMotion Robotics</h1>
       <p class="hero-subtitle">
         Fail Operational AI-Powered Autonomy for Earth’s Most Critical Missions
@@ -955,7 +959,7 @@
           </article>
 
           <article class="project-card">
-            <div class="project-image" role="img" aria-label="DPilot test flight at Baylands Park in Sunnyvale, California">
+            <div class="project-image photo" role="img" aria-label="DPilot test flight at Baylands Park in Sunnyvale, California">
               <img src="figs/2026_4_21_debrief_20260406_000720_EKF_4_52.jpg" alt="DPilot test flight at Baylands Park in Sunnyvale, California" loading="lazy" />
             </div>
             <div class="project-body">
