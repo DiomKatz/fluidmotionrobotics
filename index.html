@@ -282,7 +282,9 @@
 
     .challenge-stack {
       display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: 14px;
+      margin-top: 32px;
     }
 
     .challenge {
@@ -698,7 +700,8 @@
   .intro-grid,
   .contact-grid,
   .team-grid,
-  .vision-grid {
+  .vision-grid,
+  .challenge-stack {
     grid-template-columns: 1fr;
   }
 
@@ -806,16 +809,10 @@
   </header>
 
   <main>
-    <section id="intro" class="section section-border">
-      <div class="container intro-grid">
-        <div>
-          <p class="kicker">Mission</p>
-          <h2>Unified autonomy for critical environments</h2>
-          <p class="section-copy">
-            Fluid Motion Robotics (FMR) is a California and Greece based company rooted in two strategically important coastlines, the Pacific Ocean and the Aegean and Mediterranean Sea. These regions demand resilient, autonomous systems for monitoring, response, and continuous operations across complex environments. FMR builds the hardware and software to meet those demands.
-          </p>
-        </div>
-
+    <section class="section section-border">
+      <div class="container">
+        <p class="kicker">The Problem</p>
+        <h2>Waterways and Airspace Crises</h2>
         <div class="challenge-stack" aria-label="Problems FluidMotion Robotics is solving">
           <article class="challenge">
             <span>Environmental</span>
@@ -830,6 +827,16 @@
             <p>California (Pacific) and Greece (Aegean / Mediterranean) — coastlines where persistent autonomous monitoring and adaptable maritime operations matter.</p>
           </article>
         </div>
+      </div>
+    </section>
+
+    <section id="intro" class="section section-border">
+      <div class="container">
+        <p class="kicker">Mission</p>
+        <h2>Unified autonomy for critical environments</h2>
+        <p class="section-copy">
+            Fluid Motion Robotics (FMR) is a California and Greece based company rooted in two strategically important coastlines, the Pacific Ocean and the Aegean and Mediterranean Sea. These regions demand resilient, autonomous systems for monitoring, response, and continuous operations across complex environments. FMR builds the hardware and software to meet those demands.
+        </p>
       </div>
     </section>
 
