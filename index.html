@@ -364,6 +364,13 @@
       transition: filter 220ms ease, border-color 220ms ease;
     }
 
+      .project-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
+
     .project-card:hover .project-image {
       filter: brightness(0.95) contrast(1.05);
       border-color: rgba(164,125,171,0.28);
@@ -390,33 +397,6 @@
       line-height: 1.62;
     }
 
-    .project-list {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 14px;
-      margin-top: 24px;
-    }
-
-    .project-point {
-      border-left: 2px solid var(--accent-2);
-      padding: 12px 14px;
-      background: rgba(255,255,255,0.045);
-    }
-
-    .project-point strong {
-      display: block;
-      color: white;
-      font-size: 14px;
-      font-weight: 600;
-      margin-bottom: 6px;
-    }
-
-    .project-point span {
-      display: block;
-      color: var(--muted-2);
-      font-size: 13px;
-      line-height: 1.55;
-    }
 
     .project-flight-figure {
       margin: 20px 0 0;
@@ -828,7 +808,7 @@
           <p class="kicker">Mission</p>
           <h2>Unified autonomy for critical environments.</h2>
           <p class="section-copy">
-            Fluid Motion Robotics (FMR) is a California- and Greece-based company rooted in two strategically vital coastlines — the Pacific Ocean and the Aegean and Mediterranean Sea. Both regions face escalating maritime security threats, contested waterways, and growing demand for persistent, autonomous surveillance. FMR builds the hardware and software to meet those demands: a unified platform for Air (UAV), Ground (UGV), and Water (USV) operations where failure is not an option.
+            Fluid Motion Robotics (FMR) is a California- and Greece-based company rooted in two strategically important coastlines — the Pacific Ocean and the Aegean and Mediterranean Sea. These regions demand resilient, autonomous systems for monitoring, response, and continuous operations across complex environments. FMR builds the hardware and software to meet those demands: a unified platform for Air (UAV), Ground (UGV), and Water (USV) operations where failure is not an option.
           </p>
         </div>
 
@@ -843,7 +823,7 @@
           </article>
           <article class="challenge">
             <span>Defense &amp; Surveillance</span>
-            <p>California (Pacific) and Greece (Aegean / Mediterranean) — contested coastlines demanding persistent, autonomous maritime monitoring and rapid response.</p>
+            <p>California (Pacific) and Greece (Aegean / Mediterranean) — coastlines where persistent autonomous monitoring and adaptable maritime operations matter.</p>
           </article>
         </div>
       </div>
@@ -975,18 +955,13 @@
           </article>
 
           <article class="project-card">
+            <div class="project-image" role="img" aria-label="DPilot test flight at Baylands Park in Sunnyvale, California">
+              <img src="figs/2026_4_21_debrief_20260406_000720_EKF_4_52.jpg" alt="DPilot test flight at Baylands Park in Sunnyvale, California" loading="lazy" />
+            </div>
             <div class="project-body">
               <span class="tag">Software Platform</span>
               <h3>DPilot Platform</h3>
               <p>Mission software for semi-autonomous operation, live mission streaming, state estimation, and hybrid motion control across robotic vehicles.</p>
-              <figure class="project-flight-figure">
-                <img src="figs/2026_4_21_debrief_20260406_000720_EKF_4_52.jpg" alt="DPilot test flight at Baylands Park in Sunnyvale, California" loading="lazy" />
-                <figcaption>
-                  DPilot test flight at Baylands Park, Sunnyvale, California.
-                  Park details:
-                  <a href="https://parks.santaclaracounty.gov/locations/sunnyvale-baylands-park" target="_blank" rel="noopener">Sunnyvale Baylands Park</a>.
-                </figcaption>
-              </figure>
               <div class="project-list">
                 <div class="project-point">
                   <strong>Semi-autonomous operation</strong>
@@ -1009,8 +984,8 @@
           </article>
         </div>
 
-        <div class="simulation-wrap" aria-label="Simulation demonstrations">
-          <h3 class="simulation-title">Simulation Demonstrations</h3>
+        <div class="simulation-wrap" aria-label="Simulation">
+          <h3 class="simulation-title">Simulation</h3>
           <p class="simulation-copy">These simulation clips validate the DPilot mission workflow under different control assumptions: closed-loop autonomy behavior and open-loop vehicle physics behavior.</p>
           <div class="simulation-grid">
             <article class="simulation-card">
